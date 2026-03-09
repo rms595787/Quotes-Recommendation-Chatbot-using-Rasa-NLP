@@ -1,0 +1,131 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - hello bot
+    - hey there
+    - hi bot
+    - greetings
+    - what's up
+    - how are you
+    - good day
+    - hi there
+    - hello there
+    - hey bot
+    - nice to meet you
+    - hey assistant
+    - hello assistant
+    - hi friend
+    - hey friend
+
+- intent: motivation
+  examples: |
+    - give me motivation
+    - motivate me
+    - motivational quote
+    - i feel demotivated
+    - inspire me to work
+    - give me motivation please
+    - i need motivation
+    - say something motivating
+    - encourage me
+    - i need encouragement
+    - help me stay motivated
+    - motivate me today
+    - give me a motivational line
+    - tell me something motivating
+    - i need inspiration to work
+    - push me to do better
+    - i need a motivational message
+    - give me positive energy
+    - something motivating please
+    - boost my motivation
+
+- intent: inspiration
+  examples: |
+    - inspire me
+    - inspirational quote
+    - give inspiration
+    - i need inspiration
+    - say something inspiring
+    - give me an inspirational message
+    - tell me something inspiring
+    - inspire my day
+    - inspire my life
+    - inspire me today
+    - say an inspiring quote
+    - give me inspiration please
+    - something inspiring please
+    - i want inspiration
+    - inspire me to achieve
+    - inspire my goals
+    - give me inspiring words
+    - motivate my dreams
+    - share inspiration
+    - inspire my journey
+
+- intent: love
+  examples: |
+    - love quote
+    - romantic quote
+    - quote about love
+    - tell me something about love
+    - love message
+    - romantic line
+    - give love quote
+    - share a love quote
+    - love inspiration
+    - relationship quote
+    - quote for lovers
+    - something romantic
+    - romantic inspiration
+    - love words
+    - message about love
+    - love saying
+    - love motivation
+    - quote about relationships
+    - something sweet
+    - romantic motivation
+
+- intent: humor
+  examples: |
+    - funny quote
+    - make me laugh
+    - humor quote
+    - tell me something funny
+    - funny line
+    - give me a joke
+    - make me smile
+    - say something funny
+    - humorous quote
+    - tell a funny quote
+    - share a joke
+    - make me laugh please
+    - something funny
+    - funny message
+    - laugh quote
+    - tell a joke
+    - i want humor
+    - humor inspiration
+    - funny motivation
+    - comedy quote
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - exit
+    - quit
+    - bye bot
+    - see you later
+    - talk later
+    - end chat
+    - close chat

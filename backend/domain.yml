@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - motivation
+  - inspiration
+  - love
+  - humor
+  - goodbye
+
+responses:
+  utter_greet:
+    - text: "Hello! I can recommend motivational, inspirational, love, or funny quotes."
+
+  utter_motivation:
+    - text: "Success is not final, failure is not fatal: it is the courage to continue that counts."
+    - text: "Believe you can and you're halfway there."
+    - text: "Dream big and dare to fail."
+
+  utter_inspiration:
+    - text: "The best way to predict the future is to create it."
+    - text: "Your limitation—it's only your imagination."
+
+  utter_love:
+    - text: "Love all, trust a few, do wrong to none."
+    - text: "Where there is love there is life."
+
+  utter_humor:
+    - text: "I'm not lazy, I'm just on energy-saving mode."
+    - text: "Why don’t programmers like nature? Too many bugs."
+
+  utter_goodbye:
+    - text: "Goodbye! Stay positive and keep smiling."
+
+actions:
+  - action_motivation_quote
+  - action_inspiration_quote
+  - action_love_quote
+  - action_humor_quote
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

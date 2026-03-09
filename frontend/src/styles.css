@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* App Layout */
+
+.app {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f8;
+}
+
+.app.dark {
+  background: #1f2937;
+}
+
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.header {
+  padding: 18px 30px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.app.dark .header {
+  background: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.app.dark .project-title {
+  color: #f9fafb;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar Buttons */
+
+.new-chat,
+.dark-toggle {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.new-chat {
+  background: #2563eb;
+  color: white;
+}
+
+.new-chat:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}
+
+.dark-toggle {
+  background: #374151;
+  color: white;
+}
+
+.dark-toggle:hover {
+  background: #4b5563;
+}
+
+/* Chat List */
+
+.chat-item {
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.chat-item:hover {
+  background: #1f2937;
+  transform: translateX(4px);
+}
+
+.active {
+  background: #2563eb;
+}
+
+/* Delete icon */
+
+.delete-btn {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.chat-item:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Chat Window */
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* Message Layout */
+
+.message-row {
+  display: flex;
+  margin: 10px 0;
+}
+
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message-row.bot {
+  justify-content: flex-start;
+}
+
+/* Message Bubbles */
+
+.message-bubble {
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 60%;
+  width: fit-content;
+  animation: fadeIn 0.3s ease;
+  transition: transform 0.15s ease;
+}
+
+.message-bubble:hover {
+  transform: scale(1.03);
+}
+
+.message-bubble.user {
+  background: #2563eb;
+  color: white;
+}
+
+.message-bubble.bot {
+  background: #e5e7eb;
+}
+
+/* Avatar */
+
+.avatar {
+  font-size: 20px;
+  margin: 0 6px;
+}
+
+/* Typing Indicator */
+
+.typing-indicator {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Input Area */
+
+.input-box {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+.app.dark .input-box {
+  background: #111827;
+}
+
+.input-box textarea {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.input-box button {
+  margin-left: 10px;
+  padding: 14px 18px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input-box button:hover {
+  background: #1d4ed8;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth theme transition */
+
+* {
+  transition: background 0.2s ease, color 0.2s ease;
+}

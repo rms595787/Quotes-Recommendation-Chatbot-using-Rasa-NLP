@@ -1,0 +1,35 @@
+# ------------------------
+# Rasa
+# ------------------------
+backend/.rasa/
+backend/models/
+
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+
+# ------------------------
+# Node / React
+# ------------------------
+node_modules/
+npm-debug.log*
+
+# ------------------------
+# OS Files
+# ------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------
+# Environment variables
+# ------------------------
+.env
+.env.*
