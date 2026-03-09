@@ -2,7 +2,6 @@
 # Rasa
 # ------------------------
 backend/.rasa/
-backend/models/
 
 # ------------------------
 # Python
