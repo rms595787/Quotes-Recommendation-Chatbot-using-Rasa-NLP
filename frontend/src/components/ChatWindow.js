@@ -25,7 +25,7 @@ function ChatWindow({ messages, setMessages }) {
 
     try {
       const response = await fetch(
-        "https://quotes-recommendation-chatbot-using-rasa.onrender.com/",
+        "https://quotes-recommendation-chatbot-using-rasa.onrender.com/webhooks/rest/webhook",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
