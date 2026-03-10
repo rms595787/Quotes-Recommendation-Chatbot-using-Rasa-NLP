@@ -39,12 +39,12 @@ function ChatWindow({ messages, setMessages }) {
       const data = await response.json();
 
       if (data.length > 0) {
-        const botMessage = {
+        const botMessages = data.map((msg) => ({
           sender: "bot",
-          text: data[0].text,
-        };
+          text: msg.text,
+        }));
 
-        setMessages([...updatedMessages, botMessage]);
+        setMessages([...updatedMessages, ...botMessages]);
       }
     } catch {
       const errorMessage = {
