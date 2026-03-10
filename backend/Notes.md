@@ -1,10 +1,3 @@
-Great 👍 We will build this **step-by-step exactly the way Rasa projects are built** so your project works and you can explain it in viva.
-This will take **~45–60 minutes if you follow carefully**.
-
-I will give you the **exact folder structure + code + commands**.
-
----
-
 # 🚀 STEP 1 — Install Requirements
 
 First install **Python 3.9 or 3.10**
@@ -120,61 +113,60 @@ Replace with this:
 version: "3.1"
 
 nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - good evening
 
-- intent: greet
-  examples: |
-    - hi
-    - hello
-    - hey
-    - good morning
-    - good evening
+  - intent: motivation
+    examples: |
+      - give me motivation
+      - i need motivation
+      - motivate me
+      - motivational quote
+      - i feel demotivated
 
-- intent: motivation
-  examples: |
-    - give me motivation
-    - i need motivation
-    - motivate me
-    - motivational quote
-    - i feel demotivated
+  - intent: inspiration
+    examples: |
+      - inspire me
+      - inspirational quote
+      - give inspiration
+      - i need inspiration
 
-- intent: inspiration
-  examples: |
-    - inspire me
-    - inspirational quote
-    - give inspiration
-    - i need inspiration
+  - intent: love
+    examples: |
+      - love quote
+      - give love quote
+      - romantic quote
+      - something about love
 
-- intent: love
-  examples: |
-    - love quote
-    - give love quote
-    - romantic quote
-    - something about love
+  - intent: humor
+    examples: |
+      - funny quote
+      - make me laugh
+      - humor quote
 
-- intent: humor
-  examples: |
-    - funny quote
-    - make me laugh
-    - humor quote
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - exit
 
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - see you
-    - exit
+  - intent: affirm
+    examples: |
+      - yes
+      - correct
+      - right
 
-- intent: affirm
-  examples: |
-    - yes
-    - correct
-    - right
-
-- intent: deny
-  examples: |
-    - no
-    - not really
-    - nope
+  - intent: deny
+    examples: |
+      - no
+      - not really
+      - nope
 ```
 
 ---
@@ -203,24 +195,23 @@ intents:
   - deny
 
 responses:
-
   utter_greet:
-  - text: "Hello! I can recommend motivational, inspirational, love, or funny quotes."
+    - text: "Hello! I can recommend motivational, inspirational, love, or funny quotes."
 
   utter_motivation:
-  - text: "Success is not final, failure is not fatal: it is the courage to continue that counts."
+    - text: "Success is not final, failure is not fatal: it is the courage to continue that counts."
 
   utter_inspiration:
-  - text: "The best way to predict the future is to create it."
+    - text: "The best way to predict the future is to create it."
 
   utter_love:
-  - text: "Love all, trust a few, do wrong to none."
+    - text: "Love all, trust a few, do wrong to none."
 
   utter_humor:
-  - text: "I'm not lazy, I'm just on energy-saving mode."
+    - text: "I'm not lazy, I'm just on energy-saving mode."
 
   utter_goodbye:
-  - text: "Goodbye! Stay positive."
+    - text: "Goodbye! Stay positive."
 
 session_config:
   session_expiration_time: 60
@@ -243,33 +234,32 @@ Paste this:
 version: "3.1"
 
 stories:
+  - story: greet and motivation
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: motivation
+      - action: utter_motivation
 
-- story: greet and motivation
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: motivation
-  - action: utter_motivation
+  - story: inspiration
+    steps:
+      - intent: inspiration
+      - action: utter_inspiration
 
-- story: inspiration
-  steps:
-  - intent: inspiration
-  - action: utter_inspiration
+  - story: love quote
+    steps:
+      - intent: love
+      - action: utter_love
 
-- story: love quote
-  steps:
-  - intent: love
-  - action: utter_love
+  - story: humor quote
+    steps:
+      - intent: humor
+      - action: utter_humor
 
-- story: humor quote
-  steps:
-  - intent: humor
-  - action: utter_humor
-
-- story: goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 ```
 
 ---
@@ -288,11 +278,10 @@ Paste:
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Say goodbye anytime
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 ```
 
 ---
@@ -354,9 +343,9 @@ Example:
 
 ```yaml
 utter_motivation:
-- text: "Success is not final..."
-- text: "Believe you can and you're halfway there."
-- text: "Dream big and dare to fail."
+  - text: "Success is not final..."
+  - text: "Believe you can and you're halfway there."
+  - text: "Dream big and dare to fail."
 ```
 
 This makes the chatbot **look more intelligent**.

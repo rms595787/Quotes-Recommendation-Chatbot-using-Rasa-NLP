@@ -12,6 +12,11 @@ An AI chatbot built using Rasa NLU and React that recommends quotes based on use
 - Dark mode
 - Multiple chat sessions
 
+## Demo
+
+[Video Link](./demo/Quote%20Recommendation%20Chatbot%20Using%20RASA%20NLP.mov)  
+<video src="demo/Quote Recommendation Chatbot Using RASA NLP.mov" controls width="800"></video>
+
 ## Tech Stack
 
 Frontend: React  
@@ -31,7 +36,7 @@ pip install -r requirements.txt
 python3.10 -m rasa train
 python3.10 -m rasa shell
 python3.10 -m rasa run actions
-python3.10 -m rasa run --enable-api --cors "*"
+python3.10 -m rasa run --enable-api --cors "\*"
 
 ### You should see:
 
@@ -48,6 +53,7 @@ Action endpoint is up and running on http://0.0.0.0:5055
 ## Make sure before every run
 
 ### 1️⃣ Kill all Rasa processes
+
 ```bash
 pkill -f rasa
 lsof -i :5005
