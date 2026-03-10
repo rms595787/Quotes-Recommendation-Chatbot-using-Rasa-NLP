@@ -25,7 +25,7 @@ function ChatWindow({ messages, setMessages }) {
 
     try {
       const response = await fetch(
-        "https://quotes-recommendation-chatbot-using-rasa-nlp-production.up.railway.app/webhooks/rest/webhook",
+        "http://localhost:5005/webhooks/rest/webhook",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
