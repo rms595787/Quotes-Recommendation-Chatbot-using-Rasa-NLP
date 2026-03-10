@@ -38,10 +38,10 @@ function ChatWindow({ messages, setMessages }) {
 
       const data = await response.json();
 
-      if (data.length >= 0) {
+      if (data.length > 0) {
         const botMessages = data.map((msg) => ({
           sender: "bot",
-          text: data[0].text,
+          text: msg.text,
         }));
 
         setMessages([...updatedMessages, ...botMessages]);
