@@ -30,7 +30,7 @@ function ChatWindow({ messages, setMessages }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            sender: "user_" + Date.now(),
+            sender: "user",
             message: userMessage.text,
           }),
         },
