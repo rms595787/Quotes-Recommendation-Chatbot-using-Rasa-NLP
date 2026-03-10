@@ -33,6 +33,36 @@ python3.10 -m rasa shell
 python3.10 -m rasa run actions
 python3.10 -m rasa run --enable-api --cors "\*"
 
+### You should see:
+
+```bash
+Rasa server is up and running on http://0.0.0.0:5005
+```
+
+### and
+
+```bash
+Action endpoint is up and running on http://0.0.0.0:5055
+```
+
+## Make sure before every run
+
+### 1️⃣ Kill all Rasa processes
+```bash
+pkill -f rasa
+lsof -i :5005
+lsof -i :5055
+cd backend
+rasa train
+rasa run actions &
+rasa run --enable-api --cors "*"
+```
+
+```bash
+cd frontend
+npm start
+```
+
 ### Frontend
 
 cd frontend
